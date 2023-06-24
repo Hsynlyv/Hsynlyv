@@ -1,0 +1,208 @@
+11)
+
+result = ''
+for i in range(6):
+    eded = i* str(i)
+    print(eded)
+
+12)
+
+fib1 = 0
+fib2 = 1
+fib_sonraki = 0
+fib_list = []
+while fib_sonraki<=100:
+    fib_sonraki = fib1 + fib2
+    fib1 = fib2
+    fib2 = fib_sonraki
+    fib_list.append(fib_sonraki)
+print(fib_list)
+13)
+
+ededler = input('ededler daxil edin: ')
+ededler2 = ededler.split(',')
+cem = 0
+
+for eded in ededler2:
+    cem+= int(eded)
+
+print(cem)
+
+
+14)
+
+cumle = input('cumle daxil edin: ')
+sozler = cumle.split()
+print(sozler[-1])
+
+15)
+
+ededler = input('Ededler daxil edin: ')
+ededler2 = ededler.split(',')
+kvadratlari = []
+
+for eded in ededler2:
+    eded_kv = int(eded)**2
+    kvadratlari.append(eded_kv)
+    
+
+print(kvadratlari)
+
+
+16)
+
+result = []
+for i in range(100, 201):
+    if i % 3 == 0 and i% 5 != 0:
+        result.append(i)
+
+print(result)
+
+17)
+
+cumle = input('Cumle daxil edin: ')
+saitler = ["a", "ı", "o", "u", "e", "ə", "i", "ö", "ü"]
+cumlede_sait = []
+for herf in cumle:
+    if herf in saitler:
+        cumlede_sait.append(herf)
+
+print(len(cumlede_sait))
+
+
+18)
+
+eded = input('9 reqemli ededi daxil edin: ')
+
+eded_list = eded.split()
+
+reqemler = ['1','2','3','4','5','6','7','8','9']
+
+olmayan= []
+
+for reqem in reqemler:
+    if reqem not in eded:
+        olmayan.append(reqem)
+
+print(olmayan)
+
+
+19)
+
+cumle = input('cumle daxil edin: ')
+
+sozler = cumle.split()
+
+ters_sozler = []
+for soz in sozler:
+    ters_soz = soz[::-1]
+    ters_sozler.append(ters_soz)
+
+result = ' '.join(ters_sozler)
+print(result)
+
+20)
+
+cumle = input('Cumle daxil edin: ')
+
+sozler = cumle.split()
+
+en_qisa_soz = min(sozler, key= len)
+
+print(en_qisa_soz)
+
+21)
+
+cumle = input('Cumle daxil edin: ')
+
+sozler = cumle.split()
+
+en_uzun_soz = max(sozler, key= len)
+
+print(en_uzun_soz)
+
+22)
+
+cumle = input('cumle daxil edin: ')
+
+sozler = cumle.split()
+
+print(len(sozler))
+
+
+23)
+
+cumle = input('cumle daxil edin: ')
+
+sozler = cumle.split()
+
+soz_sayi = 0
+for soz in sozler:
+    if len(soz)== 4:
+        soz_sayi+=1
+print(soz_sayi)
+
+
+24)
+
+cumle = input('cumle daxil edin: ')
+
+sozler = cumle.split()
+
+for soz in sozler:
+    if soz[0] == 'a' and soz[-1] == 'm':
+        print(soz)
+    else:
+        continue
+
+25)
+
+cumle = input('cumle daxil edin: ')
+
+sozler = cumle.split()
+say = 0
+for soz in sozler:
+    if soz.endswith('lar'):
+        say+=1
+
+print(say)
+
+
+
+26)
+
+cumle = input('cumle daxil edin: ')
+
+sozler = cumle.split()
+print(len(sozler))
+
+
+27)
+
+cumle = input('cumle daxil edin: ')
+
+indeksler = []
+
+for herf in cumle:
+    if herf.isupper():
+        indeksler.append(cumle.index(herf))
+
+print(indeksler)
+
+
+28)
+
+
+
+29)
+
+30)
+
+eded = input('Ucreqemli natural eded daxil edin: ')
+result = 0
+for reqem in eded:
+    result+= int(reqem)**3
+if result == int(eded):
+    print('Armstrong ededidir.')
+else:
+    print('Armstrong ededi deyil.')
