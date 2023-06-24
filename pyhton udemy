@@ -1,0 +1,505 @@
+1)
+
+def sahenitap(a, h):
+    s = (a*h)/2
+    print(s)
+sahenitap(5,6)
+
+2)
+
+def tekrari_sil(soz):
+    result = []
+    for i in range(len(soz)):
+        if soz[i] == soz[i-1]:
+            continue
+        else:
+            result.append(soz[i])
+    tekrarsiz_soz= ''.join(result)
+    print(tekrarsiz_soz)
+tekrari_sil('ZZZZZEEEEEEEYYYYYYNEBBBBBB')
+
+3)
+
+def yoxla(eded):
+    reqemler = ['1','2','3','4','5','6','7','8','9']
+    olmayan = []
+    for reqem in reqemler:
+        if reqem in eded:
+            continue
+        else:
+            olmayan.append(reqem)
+    olmayan_ededler = ','.join(olmayan)
+
+    print('Ededin icinde ', olmayan_ededler, 'reqemleri yoxdur')
+
+yoxla('16379427')
+
+
+4)
+
+def nomre_qiymeti(nomre):
+    qiymet= 60
+    emsal = 0
+    if nomre[:2]== '90':
+        emsal += 3
+    if nomre[3]== nomre[4]:
+        emsal+= 4
+    if nomre[6] == nomre[7] == nomre[8]:
+        emsal+= 5
+    if nomre[6] == nomre[8] != nomre[7]:
+        emsal+=4
+    son_qiymet = int(emsal)*qiymet
+    print(son_qiymet)
+
+nomre_qiymeti('90-MZ-505')
+
+
+5)
+
+
+def ceme_bolunur(eded):
+    reqemler_cemi = 0
+    for reqem in str(eded):
+        reqemler_cemi += int(reqem)
+    if eded % reqemler_cemi == 0:
+        print('Beli, ', eded, 'ededi' ,reqemler_cemi, 'reqemine qaliqsiz bolunur')
+    else:
+        print('xeyr, ', eded, 'ededi', reqemler_cemi, 'reqemine qaliqsiz bolunmur')
+
+ceme_bolunur(238)
+
+
+6)
+
+
+7)
+
+bolunenler = []
+for i in range(1, 101):
+    if i % 3 == 0 and i % 5 == 0:
+        bolunenler.append(i)
+
+print(bolunenler)
+
+8)
+
+eded = int(input('eded daxil edin: '))
+ededler = []
+for i in range(eded):
+    if i % 2 == 0:
+        ededler.append(i)
+
+print(len(ededler))
+
+9)
+
+list = [2,2,4,3,6,9,6,1,5,1]
+for i in list:
+    if i > 3:
+        list.remove(i)
+
+print(list)
+
+10)
+
+qazanclar = [136,151,125,119,146,133,118,106,138,136,127,101]
+
+min_qazanc = min(qazanclar)
+
+max_qazanc = max(qazanclar)
+
+min_qazanc_ay = qazanclar.index(min_qazanc)+1
+max_qazanc_ay = qazanclar.index(max_qazanc)+1
+
+print('Mehsulu', min_qazanc_ay, 'ayinda alib, ', max_qazanc_ay, 'ayinda satsaq daha cox qazanc elde ederik.')
+
+
+11)
+
+result = ''
+for i in range(6):
+    eded = i* str(i)
+    print(eded)
+
+12)
+
+fib1 = 0
+fib2 = 1
+fib_sonraki = 0
+fib_list = []
+while fib_sonraki<=100:
+    fib_sonraki = fib1 + fib2
+    fib1 = fib2
+    fib2 = fib_sonraki
+    fib_list.append(fib_sonraki)
+print(fib_list)
+13)
+
+ededler = input('ededler daxil edin: ')
+ededler2 = ededler.split(',')
+cem = 0
+
+for eded in ededler2:
+    cem+= int(eded)
+
+print(cem)
+
+
+14)
+
+cumle = input('cumle daxil edin: ')
+sozler = cumle.split()
+print(sozler[-1])
+
+15)
+
+ededler = input('Ededler daxil edin: ')
+ededler2 = ededler.split(',')
+kvadratlari = []
+
+for eded in ededler2:
+    eded_kv = int(eded)**2
+    kvadratlari.append(eded_kv)
+    
+
+print(kvadratlari)
+
+
+16)
+
+result = []
+for i in range(100, 201):
+    if i % 3 == 0 and i% 5 != 0:
+        result.append(i)
+
+print(result)
+
+17)
+
+cumle = input('Cumle daxil edin: ')
+saitler = ["a", "ı", "o", "u", "e", "ə", "i", "ö", "ü"]
+cumlede_sait = []
+for herf in cumle:
+    if herf in saitler:
+        cumlede_sait.append(herf)
+
+print(len(cumlede_sait))
+
+
+18)
+
+eded = input('9 reqemli ededi daxil edin: ')
+
+eded_list = eded.split()
+
+reqemler = ['1','2','3','4','5','6','7','8','9']
+
+olmayan= []
+
+for reqem in reqemler:
+    if reqem not in eded:
+        olmayan.append(reqem)
+
+print(olmayan)
+
+
+19)
+
+cumle = input('cumle daxil edin: ')
+
+sozler = cumle.split()
+
+ters_sozler = []
+for soz in sozler:
+    ters_soz = soz[::-1]
+    ters_sozler.append(ters_soz)
+
+result = ' '.join(ters_sozler)
+print(result)
+
+20)
+
+cumle = input('Cumle daxil edin: ')
+
+sozler = cumle.split()
+
+en_qisa_soz = min(sozler, key= len)
+
+print(en_qisa_soz)
+
+21)
+
+cumle = input('Cumle daxil edin: ')
+
+sozler = cumle.split()
+
+en_uzun_soz = max(sozler, key= len)
+
+print(en_uzun_soz)
+
+22)
+
+cumle = input('cumle daxil edin: ')
+
+sozler = cumle.split()
+
+print(len(sozler))
+
+
+23)
+
+cumle = input('cumle daxil edin: ')
+
+sozler = cumle.split()
+
+soz_sayi = 0
+for soz in sozler:
+    if len(soz)== 4:
+        soz_sayi+=1
+print(soz_sayi)
+
+
+24)
+
+cumle = input('cumle daxil edin: ')
+
+sozler = cumle.split()
+
+for soz in sozler:
+    if soz[0] == 'a' and soz[-1] == 'm':
+        print(soz)
+    else:
+        continue
+
+25)
+
+cumle = input('cumle daxil edin: ')
+
+sozler = cumle.split()
+say = 0
+for soz in sozler:
+    if soz.endswith('lar'):
+        say+=1
+
+print(say)
+
+
+
+26)
+
+cumle = input('cumle daxil edin: ')
+
+sozler = cumle.split()
+print(len(sozler))
+
+
+27)
+
+cumle = input('cumle daxil edin: ')
+
+indeksler = []
+
+for herf in cumle:
+    if herf.isupper():
+        indeksler.append(cumle.index(herf))
+
+print(indeksler)
+
+
+28)
+
+
+
+29)
+
+30)
+
+eded = input('Ucreqemli natural eded daxil edin: ')
+result = 0
+for reqem in eded:
+    result+= int(reqem)**3
+if result == int(eded):
+    print('Armstrong ededidir.')
+else:
+    print('Armstrong ededi deyil.')
+
+31)
+
+eded = input('Dordreqemli natural eded yazin: ')
+
+if eded[:] == eded[::-1]:
+    print('Polindromdur')
+else:
+    print('Polindrom deyil')
+
+    
+32)
+
+eded = input('Besreqemli natural eded yazin: ')
+reqemler = []
+
+for reqem in eded:
+    reqemler.append(reqem)
+
+if reqemler == sorted(reqemler):
+    print('Butun reqemler artma sirasi ile yerlesib')
+else:
+    print('Artma sirasi ile yerlesmeyib')
+
+33)
+
+def bolunme(eded):
+    for reqem in str(eded):
+        if eded % int(reqem) != 0:
+            return False
+    return True
+print(bolunme(4837))
+
+
+34)
+
+eded = input('Dordeqemli natural eded yazin: ')
+netice = ''
+for reqem in eded:
+    if int(reqem) % 2 != 0:
+        netice+= reqem
+
+print(netice)
+
+35)
+
+eded = input('Dordreqemli eded daxil edin: ')
+
+if eded[0] != eded[1] != eded[2] != eded[3]:
+    print('YES')
+else:
+    print('NO')
+
+36)
+
+def dayaq(list):
+    for i in range(len(list)):
+        sag_cem = sum(list[:i])
+        sol_cem = sum(list[i+1:])
+        if sag_cem == sol_cem:
+            print(list[i])
+dayaq([2,3,5,1,4])
+
+
+37)
+
+
+
+38)
+
+
+
+39)
+
+eded = int(input('eded daxil edin: '))
+hasil = 1
+
+for i in range(1, eded):
+    if i % 7 == 0:
+        hasil*= i
+
+print(hasil)
+
+40)
+
+eded = int(input('eded daxil edin: '))
+list= []
+
+for i in range(1, eded):
+    if str(i).endswith('3'):
+        list.append(i)
+
+print(list)
+
+
+
+
+41)
+
+x = int(input('x: '))
+y= int(input('y: '))
+
+list = []
+
+for i in range(x, y):
+    if i % 6 != 0:
+        list.append(i)
+
+print(list)
+
+42)
+
+cumle = input('Cumle daxil edin: ')
+sozler = cumle.split()
+list = []
+for soz in sozler:
+    if len(soz) == 4:
+        list.append(soz)
+
+print(len(list))
+
+43)
+
+cumle = input('Cumle daxil edin: ')
+sozler = cumle.split()
+list = []
+for soz in sozler:
+    if soz.endswith('lar'):
+        list.append(soz)
+
+print(len(list))
+
+44)
+
+eded = int(input('Eded daxil edin: '))
+faktorial = 1
+
+for i in range(1,eded+1):
+    faktorial*= i
+print(faktorial)
+
+45)
+
+46)
+
+
+
+def siyahi_cem(siyahi):
+    print(sum(siyahi))
+
+siyahi_cem([4,5,6])
+
+47)
+
+def list_birlesdir(list1,list2):
+    list1.extend(list2)
+    print(list1)
+
+list_birlesdir([2,5,6], [7,4,5])
+
+48)
+
+49)
+
+
+def cemihesabla(eded):
+    eded_str = str(eded)
+    cem = 0
+    for reqem in eded_str:
+        cem+= int(reqem)
+    print(cem)
+
+cemihesabla(4893)
+
+50)
+
+def funksiya(eded1, eded2):
+    max_eded = max(eded1, eded2)
+    print(max_eded)
+
+funksiya(5,25)
